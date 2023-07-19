@@ -33,16 +33,16 @@ If you would like to name your database something else, you will need to change 
 
 ## Development Setup Instructions
 
-- Run `npm install`
-- Create a `.env` file at the root of the project and paste this line into the file:
+[x] - Run `npm install`
+[x] - Create a `.env` file at the root of the project and paste this line into the file:
   ```
   SERVER_SESSION_SECRET=superDuperSecret
   ```
   While you're in your new `.env` file, take the time to replace `superDuperSecret` with some long random string like `25POUbVtx6RKVNWszd9ERB9Bb6` to keep your application secure. Here's a site that can help you: [https://passwordsgenerator.net/](https://passwordsgenerator.net/). If you don't do this step, create a secret with less than eight characters, or leave it as `superDuperSecret`, you will get a warning.
 - Start postgres if not running already by using `brew services start postgresql`
-- Run `npm run server`
-- Run `npm run client`
-- Navigate to `localhost:3000`
+[x]- Run `npm run server`
+[x] - Run `npm run client`
+[x] - Navigate to `localhost:3000`
 
 ## Debugging
 
@@ -119,3 +119,100 @@ This code is also heavily commented. We recommend reading through the comments, 
 ## Update Documentation
 
 Customize this ReadMe and the code comments in this project to read less like a starter repo and more like a project. Here is an example: https://gist.github.com/PurpleBooth/109311bb0361f32d87a2
+
+- To Do list -- 
+[] SCOPE 
+      https://docs.google.com/document/d/1YzRHBY5sgdtPj9XqQyoFfJvj_v-SxmnW/edit#heading=h.gjdgxs
+  [x] Description
+  [x] Wireframs
+  [x] Database
+  [] Schedule
+
+[] Change Title name
+[] Add pages to nav bar
+    - Home (Logo)
+    - About us
+    - Get Invoulved
+    - Contact
+    - Donate
+
+[] CSS
+  []
+ 
+[] Home (Logo)
+  [] Display HomePage on DOM
+    - Create component
+    - Add to App.jsx
+    - Conenct component to nav bar
+  [] Add content
+    [] donate card
+    [] Pool Photo
+    [] Background
+
+[] About us
+  [] - Display Contact on DOM
+    - Create component
+    - Add to App.jsx
+    - Conenct component to nav bar
+  [] Add content
+
+[] Get Involved
+  [] Display Get Involved on DOM
+    - Create component
+    - Add to App.jsx
+    - Conenct component to nav bar
+  [] Add content
+
+[] Contact
+  [] - Display Contact on DOM
+    - Create component
+    - Add to App.jsx
+    - Conenct component to nav bar
+  [] Add content
+
+[] Donate
+  [] Display Donate on DOM
+    [] Create component
+    [] Add to App.jsx
+    [] Conenct component to nav bar
+  [] Add content
+    [] Create form for donation page
+    [] Payment API
+  [] Create reducer component
+  [] Create saga component
+    [] POST
+    [] GET
+    [] PUT
+    [] DELETE 
+    [] add to root saga
+  [] Create Server Routes
+    [] POST
+    [] GET
+    [] PUT
+    [] DELETE 
+    [] Add route to server.js
+
+[] SQL
+  [] user
+  [] doner_details
+  [] user_details
+  [] schalar_details
+
+
+REDUCERS
+// Step 1: Create a new reducer and export it
+
+SAGAS
+// rootSaga is the primary saga.
+// It bundles up all of the other sagas so our project can use them.
+// This is imported in index.js as rootSaga
+// some sagas trigger other sagas, as an example
+// the registration triggers a login
+// and login triggers setting the user
+
+// SAGA STEP 1: Create a saga file and export it
+// SAGA STEP 2: Import saga into root saga
+// SAGA STEP 3: Add new sagas to export default
+
+COMPONENETS
+// STEP 1: Create a component
