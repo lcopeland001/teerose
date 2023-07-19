@@ -129,49 +129,45 @@ Customize this ReadMe and the code comments in this project to read less like a 
   [] Schedule
 
 [] Change Title name
-[] Add pages to nav bar
-    - Home (Logo)
-    - About us
-    - Get Invoulved
-    - Contact
-    - Donate
+[] Add Page Compenent Folders
+    [x] Home *
+    [x] About *
+    [] Gaming *
+    [] Fitness
+    [] Military
+    [] Healing
+    [] Blog *
+    [] Podcast
+    [] Socail *
+* = Proioritize
 
 [] CSS
-  []
+  - Home
+  - 
  
-[] Home (Logo)
-  [] Display HomePage on DOM
-    - Create component
-    - Add to App.jsx
-    - Conenct component to nav bar
+[] Home 
+  [] Display on DOM
+    [] Create component
+    [] Add to App.jsx
+    [] Conenct component to nav bar
   [] Add content
-    [] donate card
-    [] Pool Photo
-    [] Background
+    [] Photo of Tee Rose
+    [] Photo Background list of headers
+    [] Short list  
 
-[] About us
-  [] - Display Contact on DOM
-    - Create component
-    - Add to App.jsx
-    - Conenct component to nav bar
+[] About
+  [] Display on DOM
+    [] Create component
+    [] Add to App.jsx
+    [] Conenct component to nav bar
   [] Add content
+    [] Photo of Tee Rose
+    [] Photo Background list of headers
+    [] Short list  
 
-[] Get Involved
-  [] Display Get Involved on DOM
-    - Create component
-    - Add to App.jsx
-    - Conenct component to nav bar
-  [] Add content
 
-[] Contact
-  [] - Display Contact on DOM
-    - Create component
-    - Add to App.jsx
-    - Conenct component to nav bar
-  [] Add content
-
-[] Donate
-  [] Display Donate on DOM
+[] Blog
+  [] Display on DOM
     [] Create component
     [] Add to App.jsx
     [] Conenct component to nav bar
@@ -194,9 +190,9 @@ Customize this ReadMe and the code comments in this project to read less like a 
 
 [] SQL
   [] user
-  [] doner_details
-  [] user_details
-  [] schalar_details
+  [] blog
+  [] 
+  [] 
 
 
 REDUCERS
