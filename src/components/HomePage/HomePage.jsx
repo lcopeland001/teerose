@@ -5,7 +5,6 @@ function HomePage() {
     <div className="container">
       <div>
         <p>Home Page</p>
-        <p>Tee Rose</p>
       </div>
     </div>
   );

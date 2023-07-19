@@ -142,8 +142,20 @@ Customize this ReadMe and the code comments in this project to read less like a 
 * = Proioritize
 
 [] CSS
-  - Home
-  - 
+    [x] Home *
+    [x] About *
+    [] Gaming *
+    [] Fitness
+    [] Military
+    [] Healing
+    [] Blog *
+    [] Podcast
+    [] Socail *
+
+[] Misc
+  [] Nav Bar
+  [] Footer
+  [] 
  
 [] Home 
   [] Display on DOM
