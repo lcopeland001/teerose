@@ -137,10 +137,10 @@ Customize this ReadMe and the code comments in this project to read less like a 
     [] Military
     [] Healing
     [] Blog *
-      [x] Add Blog
+      [x] Add Blog *
     [] AddBlog
     [] Podcast
-    [] Socail *
+    [] Social *
 * = Proioritize
 
 [] Update compenents
@@ -163,7 +163,7 @@ Customize this ReadMe and the code comments in this project to read less like a 
     [] Healing
     [] Blog *
     [] Podcast
-    [] Socail *
+    [] Social *
 
 [] Misc
   [] Nav Bar
@@ -248,9 +248,9 @@ Customize this ReadMe and the code comments in this project to read less like a 
 
 [] Blog
   [] Display on DOM
-    [] Create component
-    [] Add to App.jsx
-    [] Conenct component to nav bar
+    [x] Create component
+    [x] Add to App.jsx
+    [x] Conenct component to nav bar
   [] Add content
     [] Create form for donation page
     [] Payment API

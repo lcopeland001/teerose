@@ -16,8 +16,8 @@ import ProtectedRoute from '../ProtectedRoute/ProtectedRoute';
 import HomePage  from '../HomePage/HomePage';
 import AboutPage from '../AboutPage/AboutPage';
 import UserPage from '../UserPage/UserPage';
+import BlogPage from '../BlogPage/BlogPage';
 import AddBlog from '../AddBlog/AddBlog';
-import LandingPage from '../LandingPage/LandingPage';
 import LoginPage from '../LoginPage/LoginPage';
 import RegisterPage from '../RegisterPage/RegisterPage';
 
@@ -47,8 +47,8 @@ function App() {
             <AboutPage />
           </Route>
 
-          <Route exact path="/about">
-            <AboutPage />
+          <Route exact path="/blog">
+            <BlogPage />
           </Route>
          
           <ProtectedRoute exact path="/user">
