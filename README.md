@@ -137,13 +137,26 @@ Customize this ReadMe and the code comments in this project to read less like a 
     [] Military
     [] Healing
     [] Blog *
+      [x] Add Blog
+    [] AddBlog
     [] Podcast
     [] Socail *
 * = Proioritize
 
+[] Update compenents
+    [] Landing Page
+    [] Login Page
+    [] User Page
+    [] Nav Bar
+    [] Registration Page/ Form
+    [] Protected Route
+    [] Login Page/Form
+    [] Logout Button
+    [] Info page
+
 [] CSS
-    [x] Home *
-    [x] About *
+    [] Home *
+    [] About *
     [] Gaming *
     [] Fitness
     [] Military
@@ -158,25 +171,80 @@ Customize this ReadMe and the code comments in this project to read less like a 
   [] 
  
 [] Home 
-  [] Display on DOM
-    [] Create component
-    [] Add to App.jsx
-    [] Conenct component to nav bar
+  [x] Display on DOM
+    [x] Create component
+    [x] Add to App.jsx
+    [x] Conenct component to nav bar
   [] Add content
     [] Photo of Tee Rose
     [] Photo Background list of headers
     [] Short list  
 
 [] About
-  [] Display on DOM
-    [] Create component
-    [] Add to App.jsx
-    [] Conenct component to nav bar
+  [x] Display on DOM
+    [x] Create component
+    [x] Add to App.jsx
+    [x] Conenct component to nav bar
   [] Add content
     [] Photo of Tee Rose
     [] Photo Background list of headers
     [] Short list  
 
+[] Gaming
+  [] Display on DOM
+    [] Create component
+    [] Add to App.jsx
+    [] Conenct component to nav bar
+  [] Add content
+    [] 
+
+[] Social
+  [] Display on DOM
+    [] Create component
+    [] Add to App.jsx
+    [] Conenct component to nav bar
+  [] Add content
+    [] 
+
+[] Fitness
+  [] Display on DOM
+    [] Create component
+    [] Add to App.jsx
+    [] Conenct component to nav bar
+  [] Add content
+    [] 
+
+[] Military
+  [] Display on DOM
+    [] Create component
+    [] Add to App.jsx
+    [] Conenct component to nav bar
+  [] Add content
+    [] 
+
+[] Healing
+  [] Display on DOM
+    [] Create component
+    [] Add to App.jsx
+    [] Conenct component to nav bar
+  [] Add content
+    [] 
+
+[] Podcast
+  [] Display on DOM
+    [] Create component
+    [] Add to App.jsx
+    [] Conenct component to nav bar
+  [] Add content
+    [] 
+
+[] AddBlog 
+  [] Display on DOM
+    [x] Create component
+    [x] Add to App.jsx
+    [x] Conenct component to nav bar
+  [] Add content
+    [] 
 
 [] Blog
   [] Display on DOM

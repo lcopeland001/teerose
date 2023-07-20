@@ -21,21 +21,6 @@ function Nav() {
           </Link>
         )} */}
 
-        {/* If a user is logged in, show these links */}
-        {user.id && (
-          <>
-            <Link className="navLink" to="/user">
-              Home
-            </Link>
-
-            <Link className="navLink" to="/info">
-              Info Page
-            </Link>
-
-            <LogOutButton className="navLink" />
-          </>
-        )}
-
         <Link className="navLink" to="/home">
           Home
         </Link>
@@ -43,6 +28,22 @@ function Nav() {
         <Link className="navLink" to="/about">
           About
         </Link>
+
+        {/* If a user is logged in, show these links */}
+        {user.id && (
+          <>
+            <Link className="navLink" to="/user">
+              User
+            </Link>
+
+            <Link className="navLink" to="/addblog">
+              Add Blog
+            </Link>
+
+            <LogOutButton className="navLink" />
+          </>
+        )}
+
       </div>
     </div>
   );
