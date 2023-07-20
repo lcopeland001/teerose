@@ -18,6 +18,7 @@ import AboutPage from '../AboutPage/AboutPage';
 import UserPage from '../UserPage/UserPage';
 import BlogPage from '../BlogPage/BlogPage';
 import AddBlog from '../AddBlog/AddBlog';
+import SocialPage from '../SocialPage/SocialPage';
 import LoginPage from '../LoginPage/LoginPage';
 import RegisterPage from '../RegisterPage/RegisterPage';
 
@@ -49,6 +50,10 @@ function App() {
 
           <Route exact path="/blog">
             <BlogPage />
+          </Route>
+
+          <Route exact path="/social">
+            <SocialPage />
           </Route>
          
           <ProtectedRoute exact path="/user">

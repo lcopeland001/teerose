@@ -157,7 +157,7 @@ Customize this ReadMe and the code comments in this project to read less like a 
 [] CSS
     [] Home *
     [] About *
-    [] Gaming *
+    [] Gaming 
     [] Fitness
     [] Military
     [] Healing
@@ -199,10 +199,10 @@ Customize this ReadMe and the code comments in this project to read less like a 
     [] 
 
 [] Social
-  [] Display on DOM
-    [] Create component
-    [] Add to App.jsx
-    [] Conenct component to nav bar
+  [x] Display on DOM
+    [x] Create component
+    [x] Add to App.jsx
+    [x] Conenct component to nav bar
   [] Add content
     [] 
 
@@ -252,8 +252,8 @@ Customize this ReadMe and the code comments in this project to read less like a 
     [x] Add to App.jsx
     [x] Conenct component to nav bar
   [] Add content
-    [] Create form for donation page
-    [] Payment API
+    [] Create form for blog page
+    [] 
   [] Create reducer component
   [] Create saga component
     [] POST
@@ -271,8 +271,6 @@ Customize this ReadMe and the code comments in this project to read less like a 
 [] SQL
   [] user
   [] blog
-  [] 
-  [] 
 
 
 REDUCERS
