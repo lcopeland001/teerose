@@ -1,6 +1,6 @@
 import React from 'react';
 
-function AddBlog() {
+function BlogForm() {
   return (
     <div className="container">
       <p>Add Blog</p>
@@ -8,4 +8,4 @@ function AddBlog() {
   );
 }
 
-export default AddBlog;
+export default BlogForm;

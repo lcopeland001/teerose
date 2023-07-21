@@ -290,3 +290,8 @@ SAGAS
 
 COMPONENETS
 // STEP 1: Create a component
+
+Time Frames
+- Set up (20 min)
+- Display on DOM (10 min)
+- 

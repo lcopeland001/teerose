@@ -17,7 +17,7 @@ import HomePage  from '../HomePage/HomePage';
 import AboutPage from '../AboutPage/AboutPage';
 import UserPage from '../UserPage/UserPage';
 import BlogPage from '../BlogPage/BlogPage';
-import AddBlog from '../AddBlog/AddBlog';
+import BlogForm from '../BlogForm/BlogForm';
 import SocialPage from '../SocialPage/SocialPage';
 import LoginPage from '../LoginPage/LoginPage';
 import RegisterPage from '../RegisterPage/RegisterPage';
@@ -60,8 +60,8 @@ function App() {
             <UserPage />
           </ProtectedRoute>
 
-          <ProtectedRoute exact path="/addblog">
-            <AddBlog />
+          <ProtectedRoute exact path="/blogform">
+            <BlogForm />
           </ProtectedRoute>
 
           <Route exact path="/login">
