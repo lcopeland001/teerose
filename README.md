@@ -187,8 +187,7 @@ Customize this ReadMe and the code comments in this project to read less like a 
     [x] Conenct component to nav bar
   [] Add content
     [] Photo of Tee Rose
-    [] Photo Background list of headers
-    [] Short list  
+    [] Bio 
 
 [] Gaming
   [] Display on DOM
@@ -253,24 +252,27 @@ Customize this ReadMe and the code comments in this project to read less like a 
     [x] Conenct component to nav bar
   [] Add content
     [] Create form for blog page
-    [] 
-  [] Create reducer component
-  [] Create saga component
-    [] POST
-    [] GET
-    [] PUT
-    [] DELETE 
+    [] add form fucntion
+  [] Reducer
+    [x] Create reducer component
+    [x] reducer function
+  [] Saga
+    [x] Create saga component
+    [x] Create (GET)
+    [] R (POST)
+    [] Update (PUT)
+    [] Delete (DELETE) 
     [] add to root saga
   [] Create Server Routes
-    [] POST
-    [] GET
-    [] PUT
-    [] DELETE 
+    [] Create (GET)
+    [] R (POST)
+    [] Update (PUT)
+    [] Delete (DELETE) 
     [] Add route to server.js
 
 [] SQL
-  [] user
-  [] blog
+  [x] user
+  [x] blog
 
 
 REDUCERS
