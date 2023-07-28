@@ -237,7 +237,7 @@ Customize this ReadMe and the code comments in this project to read less like a 
   [] Add content
     [] 
 
-[] AddBlog 
+[] Blog 
   [] Display on DOM
     [x] Create component
     [x] Add to App.jsx
@@ -245,12 +245,13 @@ Customize this ReadMe and the code comments in this project to read less like a 
   [] Add content
     [] 
 
-[] Blog
+[] Add Blog
   [] Display on DOM
     [x] Create component
     [x] Add to App.jsx
     [x] Conenct component to nav bar
   [] Add content
+    [] Add data from database
     [] Create form for blog page
     [] add form fucntion
   [] Reducer
@@ -264,11 +265,14 @@ Customize this ReadMe and the code comments in this project to read less like a 
     [] Delete (DELETE) 
     [] add to root saga
   [] Create Server Routes
-    [] Create (GET)
+    [x] Create (GET)
     [] R (POST)
     [] Update (PUT)
     [] Delete (DELETE) 
     [] Add route to server.js
+  [] Add to server.js
+    [] require
+    [] app.use 
 
 [] SQL
   [x] user
