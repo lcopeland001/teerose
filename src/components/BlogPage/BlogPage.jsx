@@ -4,17 +4,18 @@ import axios from 'axios';
 
 
 function BlogPage() {
-  const blogPost = useSelector(store => store.blogPost);
+  const blogPost = useSelector((store) => store.blog);
 
   const dispatch = useDispatch();
 
   useEffect(() => {
-    fetchBlog();
-  })
-  
-  const fetchBlog = () => {
+    // fetchBlog();
     dispatch({ type: 'FETCH_BLOG' });
-  }
+  }, []);
+  
+  // const fetchBlog = () => {
+  //   dispatch({ type: 'FETCH_BLOG' });
+  // }
   
   return (
     <div className="container">

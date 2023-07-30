@@ -1,19 +1,19 @@
 import axios from "axios";
-import { put, takeLatest } from 'redux-saga/effects'
+import { put, takeEvery } from 'redux-saga/effects';
+
+function* blogSaga() {
+    yield takeEvery ('FETCH_BLOG', fetchBlog);
+}
 
 // READ
 function* fetchBlog() {
     try {
-        const blogResponse = yield axios.get('api/blog');
-        yield put({ type: 'SET_BLOG', payload: blogResponse.data })
+        const blog = yield axios.get('/api/blog');
+        yield put({ type: 'SET_BLOG', payload: blog.data });
     } catch (error) {
         console.log('Error Fetching Blogs', error);
         alert('Something went wrong!');
     }
 } 
 
-function* blogSaga() {
-    yield takeLatest('FETCH_BLOG', fetchBlog);
-}
-
-export default blogSaga;
+export default blogSaga

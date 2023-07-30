@@ -261,26 +261,28 @@ Customize this ReadMe and the code comments in this project to read less like a 
   
 [] Blog Data
   [] Reducer
-    [x] Create reducer component
-    [] Add to root reducer
-    [x] reducer function
+    [na] Create reducer component
+    [x] Add to root reducer
+    [x] reducer function 
     
   [] Saga
     [x] Create saga component
-    [] add to root saga
+    [x] add to root saga
     [x] Create (GET)
+      []
+      []
     [] Read (POST)
     [] Update (PUT)
     [] Delete (DELETE) 
     
-  [] Create Server Routes
+  [] Create Server Routes (router)
     [x] Create (GET)
-    [] R (POST)
+    [] Read (POST)
     [] Update (PUT)
     [] Delete (DELETE) 
-    [] Add route to server.js
+  
   [] Add to server.js
-    [x] require
+    [x] declare blog.router-require
     [x] app.use 
 
 [] SQL
