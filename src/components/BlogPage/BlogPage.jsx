@@ -19,17 +19,19 @@ function BlogPage() {
   
   return (
     <div className="container">
-      <div>
-        <p>Blogs</p>
-        <pre>{JSON.stringify(blogPost)}</pre>
-        {/* <h1>Author ID: {blogPost.id}</h1> */}
+        {/* <pre>{JSON.stringify(blogPost)}</pre> */}
 
-                    {/* {
-                blogPost.map(blog => {
-                    return <div key={blog.id}>{blog.name}</div>
-                })
-            } */}
-      </div>
+        <h1>Blogs</h1>
+          {blogPost.map(blog => {
+            return (
+              <>
+                <p>Title: {blog.date}</p>
+                <p>Author Name: {blog.author_first_name} {blog.author_last_name}</p>
+                <p>Date: {blog.date}</p>
+                <p>Blog: {blog.post} </p>
+              </>
+            );
+          })}
     </div>
   );
 }
