@@ -1,6 +1,7 @@
 import axios from "axios";
 import { put, takeLatest } from 'redux-saga/effects'
 
+// READ
 function* fetchBlog() {
     try {
         const blogResponse = yield axios.get('api/blog');

@@ -243,7 +243,11 @@ Customize this ReadMe and the code comments in this project to read less like a 
     [x] Add to App.jsx
     [x] Conenct component to nav bar
   [] Add content
-    [] 
+    [] Add Blog List 
+      [x] useSelector
+      [x] useDispatch
+      [x] useEffect
+      []
 
 [] Add Blog
   [] Display on DOM
@@ -254,13 +258,15 @@ Customize this ReadMe and the code comments in this project to read less like a 
     [] Add data from database
     [] Create form for blog page
     [] add form fucntion
+  
+[] Blog Data
   [] Reducer
     [x] Create reducer component
     [x] reducer function
   [] Saga
     [x] Create saga component
     [x] Create (GET)
-    [] R (POST)
+    [] Read (POST)
     [] Update (PUT)
     [] Delete (DELETE) 
     [] add to root saga
@@ -271,8 +277,8 @@ Customize this ReadMe and the code comments in this project to read less like a 
     [] Delete (DELETE) 
     [] Add route to server.js
   [] Add to server.js
-    [] require
-    [] app.use 
+    [x] require
+    [x] app.use 
 
 [] SQL
   [x] user
@@ -301,3 +307,7 @@ Time Frames
 - Set up (20 min)
 - Display on DOM (10 min)
 - 
+
+Distplay Data from database
+import useDispatch useSelector
+import axios
