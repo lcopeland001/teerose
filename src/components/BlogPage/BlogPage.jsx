@@ -20,7 +20,14 @@ function BlogPage() {
     <div className="container">
       <div>
         <p>Blogs</p>
-        
+        <pre>{JSON.stringify(blogPost)}</pre>
+        {/* <h1>Author ID: {blogPost.id}</h1> */}
+
+                    {/* {
+                blogPost.map(blog => {
+                    return <div key={blog.id}>{blog.name}</div>
+                })
+            } */}
       </div>
     </div>
   );

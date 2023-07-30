@@ -262,14 +262,17 @@ Customize this ReadMe and the code comments in this project to read less like a 
 [] Blog Data
   [] Reducer
     [x] Create reducer component
+    [] Add to root reducer
     [x] reducer function
+    
   [] Saga
     [x] Create saga component
+    [] add to root saga
     [x] Create (GET)
     [] Read (POST)
     [] Update (PUT)
     [] Delete (DELETE) 
-    [] add to root saga
+    
   [] Create Server Routes
     [x] Create (GET)
     [] R (POST)
