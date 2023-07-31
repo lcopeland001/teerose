@@ -122,13 +122,13 @@ Customize this ReadMe and the code comments in this project to read less like a 
 
 - To Do list -- 
 [] SCOPE 
-      https://docs.google.com/document/d/1YzRHBY5sgdtPj9XqQyoFfJvj_v-SxmnW/edit#heading=h.gjdgxs
+  [] URL: https://docs.google.com/document/d/1YzRHBY5sgdtPj9XqQyoFfJvj_v-SxmnW/edit#heading=h.gjdgxs
   [x] Description
   [x] Wireframs
   [x] Database
   [] Schedule
 
-[] Change Title name
+[x] Change Title name
 [] Add Page Compenent Folders
     [x] Home *
     [x] About *
@@ -136,8 +136,9 @@ Customize this ReadMe and the code comments in this project to read less like a 
     [] Fitness
     [] Military
     [] Healing
-    [] Blog *
-      [x] Add Blog *
+    [x] Blog *
+      [] Blog Admin *
+      [x] Blog Form *
     [] AddBlog
     [] Podcast
     [] Social *
@@ -168,7 +169,6 @@ Customize this ReadMe and the code comments in this project to read less like a 
 [] Misc
   [] Nav Bar
   [] Footer
-  [] 
  
 [] Home 
   [x] Display on DOM
@@ -237,40 +237,42 @@ Customize this ReadMe and the code comments in this project to read less like a 
   [] Add content
     [] 
 
-[] Blog 
+[] Blog Page
   [] Display on DOM
     [x] Create component
     [x] Add to App.jsx
     [x] Conenct component to nav bar
   [] Add content
-    [] Add Blog List 
+    [] Add Blog data from database 
       [x] useSelector
       [x] useDispatch
       [x] useEffect
-      []
 
-[] Add Blog
+[] Blog Form
   [] Display on DOM
     [x] Create component
     [x] Add to App.jsx
     [x] Conenct component to nav bar
   [] Add content
-    [] Add data from database
-    [] Create form for blog page
-    [] add form fucntion
+    [] Form
+      [] useSelector
+      [] useDispatch
+      [] useEffect
+      [] use history
+      [] form content
   
 [] Blog Data
   [] Reducer
     [na] Create reducer component
     [x] Add to root reducer
-    [x] reducer function 
+    [x] reducer function- make sure call matches saga
     
   [] Saga
     [x] Create saga component
     [x] add to root saga
     [x] Create (GET)
-      []
-      []
+      [] /
+      [] /id
     [] Read (POST)
     [] Update (PUT)
     [] Delete (DELETE) 
@@ -316,3 +318,23 @@ Time Frames
 Distplay Data from database
 import useDispatch useSelector
 import axios
+
+Root Saga Notes
+// rootSaga is the primary saga.
+// It bundles up all of the other sagas so our project can use them.
+// This is imported in index.js as rootSaga
+
+// some sagas trigger other sagas, as an example
+// the registration triggers a login
+// and login triggers setting the user
+
+Root Reducer
+// rootReducer is the primary reducer for our entire project
+// It bundles up all of the other reducers so our project can use them.
+// This is imported in index.js as rootSaga
+
+// Lets make a bigger object for our store, with the objects from our reducers.
+// This is what we get when we use 'state' inside of 'mapStateToProps'
+
+  errors, // contains registrationMessage and loginMessage
+  user, // will have an id and username if someone is logged in
