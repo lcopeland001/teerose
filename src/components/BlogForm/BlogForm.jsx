@@ -55,7 +55,7 @@ function BlogForm() {
   return (
     <div className="container">
       <h1>Blog Form</h1>
-      <form>
+      <form onSubmit={submitForm}>
         <p>
           Author First Name:
           <input value={author_first_name} onChange={(e) => setAuthorFirstName(e.target.value)} />
@@ -76,6 +76,7 @@ function BlogForm() {
           Post:
           <input value={post} onChange={(e) => setPost(e.target.value)} />
         </p>
+        <input type="submit"/>
       </form>
     </div>
   );

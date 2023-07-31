@@ -32,9 +32,9 @@ router.post('/', (req, res) => {
   const queryText = 
   `INSERT INTO "blog" ("user_id", "author_first_name", "author_last_name", "date", "title", "post") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id";`
   pool.query(queryText, [
-    req.body.user_id, 
+    req.user.id, 
     req.body.author_first_name, 
-    req.body.author_lat_name, 
+    req.body.author_last_name, 
     req.body.date,
     req.body.title,
     req.body.post
