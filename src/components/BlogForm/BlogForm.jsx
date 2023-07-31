@@ -51,7 +51,11 @@ function BlogForm() {
 
   return (
     <div className="container">
+<<<<<<< HEAD
       <h1>Blog Form</h1>
+=======
+      <p>Blog Form</p>
+>>>>>>> d976f4f749f788bfca9a224a249a9d43ae181596
       <form>
         <p>
           Author First Name:
