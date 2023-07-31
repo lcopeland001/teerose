@@ -8,6 +8,9 @@ function BlogForm() {
   const history = useHistory();
   const dispatch = useDispatch();
 
+  const user = useSelector((store) => store.user);
+  const blog = useSelector((store) => store.blog);
+
   const [author_first_name, setAuthorFirstName] = useState('');
   const [author_last_name, setAuthorLastName] = useState('');
   const [date, setDate] = useState('');
@@ -15,6 +18,10 @@ function BlogForm() {
   const [post, setPost] = useState('');
   const { id } = useParams();
   const { user_id } = useParams();
+
+  useEffect(() =>{
+    addBlog();
+  }, [id]);
 
   const addBlog = () => {
     if (id) { // Return false if id is undefined 
@@ -32,10 +39,6 @@ function BlogForm() {
       } 
     }
 
-  useEffect(() =>{
-    addBlog();
-  }, [id]);
-
   const submitForm = (e) => {
     e.preventDefault();
     if(id) {
@@ -51,11 +54,7 @@ function BlogForm() {
 
   return (
     <div className="container">
-<<<<<<< HEAD
       <h1>Blog Form</h1>
-=======
-      <p>Blog Form</p>
->>>>>>> d976f4f749f788bfca9a224a249a9d43ae181596
       <form>
         <p>
           Author First Name:
@@ -83,4 +82,3 @@ function BlogForm() {
 }
 
 export default BlogForm;
-
