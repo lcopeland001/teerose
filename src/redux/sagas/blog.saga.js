@@ -3,6 +3,8 @@ import { put, takeEvery } from 'redux-saga/effects';
 
 function* blogSaga() {
     yield takeEvery ('FETCH_BLOG', fetchBlog);
+    yield takeEvery ('ADD_BLOG', addBlog);
+    yield takeEvery ('EDIT_BLOG', editBlog);
 }
 
 // CREATE
@@ -29,5 +31,17 @@ function* fetchBlog() {
         alert('Something went wrong in Fetch Blog!');
     }
 } 
+
+// UPDATE
+function * editBlog(action) {
+    try {
+        yield axios.put(`/api/blog/${action.payload.id}`, action.payload);
+        if (action.history) {
+            action.history.goBack();
+        }
+    }catch (e) {
+        console.log('Error in Blog Saga UPDATE', e);
+    }
+}
 
 export default blogSaga
