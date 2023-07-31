@@ -5,6 +5,9 @@ function* blogSaga() {
     yield takeEvery ('FETCH_BLOG', fetchBlog);
 }
 
+// CREATE
+
+
 // READ
 function* fetchBlog() {
     try {
@@ -12,7 +15,7 @@ function* fetchBlog() {
         yield put({ type: 'SET_BLOG', payload: blog.data });
     } catch (error) {
         console.log('Error Fetching Blogs', error);
-        alert('Something went wrong!');
+        alert('Something went wrong in Fetch Blog!');
     }
 } 
 

@@ -9,13 +9,12 @@ function BlogPage() {
   const dispatch = useDispatch();
 
   useEffect(() => {
-    // fetchBlog();
-    dispatch({ type: 'FETCH_BLOG' });
+    fetchBlog();
   }, []);
   
-  // const fetchBlog = () => {
-  //   dispatch({ type: 'FETCH_BLOG' });
-  // }
+  const fetchBlog = () => {
+    dispatch({ type: 'FETCH_BLOG' });
+  }
   
   return (
     <div className="container">
