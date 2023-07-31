@@ -291,6 +291,8 @@ Customize this ReadMe and the code comments in this project to read less like a 
   [x] user
   [x] blog
 
+Flow(setup): Page => Saga(rootsaga) => Reducer(rootdeducer) => Router(server)
+Flow: Page => Saga => Router
 
 REDUCERS
 // Step 1: Create a new reducer and export it

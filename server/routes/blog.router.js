@@ -26,4 +26,24 @@ router.get('/:id', (req, res) => {
       })
 });
 
+// POST Blog
+router.post('/', (req, res) => {
+  console.log(req.body);
+  const queryText = 
+  `INSERT INTO "blog" ("user_id", "author_first_name", "author_last_name", "date", "title", "post") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id";`
+  pool.query(queryText, [
+    req.body.user_id, 
+    req.body.author_first_name, 
+    req.body.author_lat_name, 
+    req.body.date,
+    req.body.title,
+    req.body.post
+  ]).then(result => {
+    console.log('New blog Id:', result.rows[0].id);
+  }).catch(e => {
+    console.log(e);
+    res.sendStatus(500);
+  })
+})
+
 module.exports = router;
