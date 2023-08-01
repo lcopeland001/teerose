@@ -14,7 +14,7 @@ function * addBlog(action) {
         yield put({ type: 'FETCH_BLOG'});
         if (action.history) {
             //redirect back to blog list page
-            action.history.push('/blogform');
+            navigate('/blog');
         }
     }catch (e) {
         console.log('Error in Saga CREATE', e);

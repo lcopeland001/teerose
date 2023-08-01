@@ -270,16 +270,14 @@ Customize this ReadMe and the code comments in this project to read less like a 
   [] Saga
     [x] Create saga component
     [x] add to root saga
-    [x] Create (GET)
-      [] /
-      [] /id
-    [] Read (POST)
-    [] Update (PUT)
+    [x] Create (POST)
+    [x] Read (GET)
+    [x] Update (PUT)
     [] Delete (DELETE) 
     
   [] Create Server Routes (router)
-    [x] Create (GET)
-    [] Read (POST)
+    [x] Create (POST)
+    [x] Read (GET)
     [] Update (PUT)
     [] Delete (DELETE) 
   

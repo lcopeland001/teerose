@@ -1,15 +1,13 @@
 import React from 'react';
 import { useSelector, useDispatch } from 'react-redux';
-import { useHistory, useParams  } from 'react-router-dom';
+import { useNavigate, useParams  } from 'react-router-dom';
 import { useEffect, useState } from 'react';
 import axios from 'axios';
 
 function BlogForm() {
-  const history = useHistory();
+  const navigate = useNavigate();
   const dispatch = useDispatch();
 
-  const user = useSelector((store) => store.user);
-  const blog = useSelector((store) => store.blog);
 
   const [author_first_name, setAuthorFirstName] = useState('');
   const [author_last_name, setAuthorLastName] = useState('');
@@ -44,11 +42,11 @@ function BlogForm() {
     if(id) {
       dispatch({ 
         type: 'EDIT_BLOG', 
-        payload: { author_first_name, author_last_name, date, title, post, id, user_id }, history })
+        payload: { author_first_name, author_last_name, date, title, post, id, user_id }, navigate })
     } else {
       dispatch({ 
         type: 'ADD_BLOG',
-        payload: { author_first_name, author_last_name, date, title, post }, history });
+        payload: { author_first_name, author_last_name, date, title, post }, navigate });
     }
   }
 

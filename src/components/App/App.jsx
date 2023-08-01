@@ -5,7 +5,7 @@ import {
   Route,
   Switch,
 } from 'react-router-dom';
-
+import { CompatRouter } from 'react-router-dom-v5-compat';
 import { useDispatch, useSelector } from 'react-redux';
 
 import Nav from '../Nav/Nav';
@@ -35,50 +35,52 @@ function App() {
 
   return (
     <Router>
-      <div>
-        <Nav />
-        <Switch>
-          <Redirect exact from="/" to="/home" />
+      <CompatRouter>
+        <div>
+          <Nav />
+          <Switch>
+            <Redirect exact from="/" to="/home" />
 
-          <Route exact path="/home">
-              <HomePage />
-          </Route>
+            <Route exact path="/home">
+                <HomePage />
+            </Route>
 
-          <Route exact path="/about">
-            <AboutPage />
-          </Route>
+            <Route exact path="/about">
+              <AboutPage />
+            </Route>
 
-          <Route exact path="/blog">
-            <BlogPage />
-          </Route>
+            <Route exact path="/blog">
+              <BlogPage />
+            </Route>
 
-          <Route exact path="/social">
-            <SocialPage />
-          </Route>
-         
-          <ProtectedRoute exact path="/user">
-            <UserPage />
-          </ProtectedRoute>
+            <Route exact path="/social">
+              <SocialPage />
+            </Route>
+          
+            <ProtectedRoute exact path="/user">
+              <UserPage />
+            </ProtectedRoute>
 
-          <ProtectedRoute exact path="/blogform">
-            <BlogForm />
-          </ProtectedRoute>
+            <ProtectedRoute exact path="/blogform">
+              <BlogForm />
+            </ProtectedRoute>
 
-          <Route exact path="/login">
-            {user.id ? <Redirect to="/user" /> : <LoginPage />}
-          </Route>
+            <Route exact path="/login">
+              {user.id ? <Redirect to="/user" /> : <LoginPage />}
+            </Route>
 
-          <Route exact path="/registration">
-            {user.id ? <Redirect to="/user" /> : <RegisterPage />}
-          </Route>
+            <Route exact path="/registration">
+              {user.id ? <Redirect to="/user" /> : <RegisterPage />}
+            </Route>
 
-          <Route>
-            <h1>404</h1>
-          </Route>
+            <Route>
+              <h1>404</h1>
+            </Route>
 
-        </Switch>
-        <Footer />
-      </div>
+          </Switch>
+          <Footer />
+        </div>
+      </CompatRouter>
     </Router>
   );
 }
