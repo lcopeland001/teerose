@@ -12,9 +12,9 @@ function * addBlog(action) {
     try{
         yield axios.post(`/api/blog`, action.payload);
         yield put({ type: 'FETCH_BLOG'});
-        if (action.history) {
+        if (action.navigate) {
             //redirect back to blog list page
-            navigate('/blog');
+            action.navigate('/blog');
         }
     }catch (e) {
         console.log('Error in Saga CREATE', e);
@@ -37,7 +37,7 @@ function * editBlog(action) {
     try {
         yield axios.put(`/api/blog/${action.payload.id}`, action.payload);
         if (action.history) {
-            action.history.goBack();
+            navigate('/blog');
         }
     }catch (e) {
         console.log('Error in Blog Saga UPDATE', e);

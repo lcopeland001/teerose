@@ -1,8 +1,9 @@
 import React from 'react';
 import { useSelector, useDispatch } from 'react-redux';
-import { useNavigate, useParams  } from 'react-router-dom';
+import { useParams  } from 'react-router-dom';
 import { useEffect, useState } from 'react';
 import axios from 'axios';
+import { useNavigate } from 'react-router-dom-v5-compat';
 
 function BlogForm() {
   const navigate = useNavigate();

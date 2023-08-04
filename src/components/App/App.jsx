@@ -5,9 +5,11 @@ import {
   Route,
   Switch,
 } from 'react-router-dom';
-import { CompatRouter } from 'react-router-dom-v5-compat';
+import { CompatRouter, 
+  BrowserRouter,
+  CompatRoute,
+} from 'react-router-dom-v5-compat';
 import { useDispatch, useSelector } from 'react-redux';
-
 import Nav from '../Nav/Nav';
 import Footer from '../Footer/Footer';
 
@@ -34,7 +36,7 @@ function App() {
   }, [dispatch]);
 
   return (
-    <Router>
+    <BrowserRouter>
       <CompatRouter>
         <div>
           <Nav />
@@ -49,9 +51,9 @@ function App() {
               <AboutPage />
             </Route>
 
-            <Route exact path="/blog">
+            <CompatRoute exact path="/blog">
               <BlogPage />
-            </Route>
+            </CompatRoute>
 
             <Route exact path="/social">
               <SocialPage />
@@ -81,7 +83,7 @@ function App() {
           <Footer />
         </div>
       </CompatRouter>
-    </Router>
+    </BrowserRouter>
   );
 }
 
