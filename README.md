@@ -247,6 +247,7 @@ Customize this ReadMe and the code comments in this project to read less like a 
       [x] useSelector
       [x] useDispatch
       [x] useEffect
+    [] Delete Button
 
 [] Blog Form
   [] Display on DOM
@@ -254,12 +255,12 @@ Customize this ReadMe and the code comments in this project to read less like a 
     [x] Add to App.jsx
     [x] Conenct component to nav bar
   [] Add content
-    [] Form
-      [] useSelector
-      [] useDispatch
-      [] useEffect
-      [] use history
-      [] form content
+    [x] Form
+      [x] useSelector
+      [x] useDispatch
+      [x] useEffect
+      [x] use history
+      [x] form content
   
 [] Blog Data
   [] Reducer
@@ -273,13 +274,13 @@ Customize this ReadMe and the code comments in this project to read less like a 
     [x] Create (GET)
       [] /
       [] /id
-    [] Read (POST)
+    [x] Read (POST)
     [] Update (PUT)
     [] Delete (DELETE) 
     
   [] Create Server Routes (router)
     [x] Create (GET)
-    [] Read (POST)
+    [x] Read (POST)
     [] Update (PUT)
     [] Delete (DELETE) 
   
