@@ -8,9 +8,6 @@ function BlogForm() {
   const history = useHistory();
   const dispatch = useDispatch();
 
-  const user = useSelector((store) => store.user);
-  const blog = useSelector((store) => store.blog);
-
   const [author_first_name, setAuthorFirstName] = useState('');
   const [author_last_name, setAuthorLastName] = useState('');
   const [date, setDate] = useState('');
@@ -23,6 +20,10 @@ function BlogForm() {
     addBlog();
   }, [id]);
 
+  const returnHomeButton = () => {
+    history.push(`/home`) 
+    }
+
   const addBlog = () => {
     if (id) { // Return false if id is undefined 
       axios.get(`/api/blog/${id}`).then(response => {
@@ -33,7 +34,7 @@ function BlogForm() {
         setTitle(blog.title);
         setPost(blog.post);
       }).catch(error => {
-        console.log('Error post property', error);
+        console.log('Error', error);
         alert('Something went wrong adding blog');
         })
       } 
@@ -44,14 +45,15 @@ function BlogForm() {
     if(id) {
       dispatch({ 
         type: 'EDIT_BLOG', 
-        payload: { author_first_name, author_last_name, date, title, post, id, user_id }, history })
+        payload: { author_first_name, author_last_name, date, title, post, id, user_id } });
+        history.push(`/user`);
     } else {
       dispatch({ 
         type: 'ADD_BLOG',
-        payload: { author_first_name, author_last_name, date, title, post }, history });
+        payload: { author_first_name, author_last_name, date, title, post } });
+        history.push(`/user`);
     }
   }
-
   return (
     <div className="container">
       <h1>Blog Form</h1>
@@ -78,6 +80,9 @@ function BlogForm() {
         </p>
         <input type="submit"/>
       </form>
+
+  <button onClick={returnHomeButton}>Return To Home</button>
+
     </div>
   );
 }
