@@ -11,11 +11,21 @@ const blog = (state = [], action) => {
   }
 }
 
+const selectedBlog = (state ={}, action) => {
+  switch (action.type) {
+    case 'SET_BLOG_DETAILS':
+      return action.payload;
+    default: 
+      return state;
+  }
+}
+
 
 const rootReducer = combineReducers({
   errors,
   user,
   blog,
+  selectedBlog,
 });
 
 export default rootReducer;

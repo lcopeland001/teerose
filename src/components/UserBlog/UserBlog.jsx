@@ -5,13 +5,18 @@ import { useHistory, useParams  } from 'react-router-dom';
 
 function UserBlog() {
   const blogPost = useSelector((store) => store.blog);
+  
   const history = useHistory();
   const dispatch = useDispatch();
+  
   const { blogId } = useParams();
 
   useEffect(() => {
-
-  }, []);
+    dispatch({
+      type: 'FETCH_BLOG_DETAILS',
+      payload: blogId
+    });
+  }, [blogId]);
   
   const deleteBlog = () => {
     confirm('Are you sure you want to delete this Blog? ');
