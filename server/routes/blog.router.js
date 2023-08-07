@@ -46,4 +46,22 @@ router.post('/', (req, res) => {
   })
 })
 
+// UPDATE Blog
+
+
+// DELETE Blog
+router.delete('/:id', (req, res) => {
+  if (req.isAuthenticated()) {
+    const queryText = `DELETE FRMO "blog" WHERE "id" = $1 AND "user_id" = $2;`;
+    pool.query(queryText, [req.params.id, req.user.id]).then(() => {
+      res.sendStatus(200);
+    }).catch((error) => {
+      console.log(error in router);
+      res.sendStatus(500);
+    });
+  } else {
+    res.sendStatus(403); // Forbidden
+  }
+})
+
 module.exports = router;

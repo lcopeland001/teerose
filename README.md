@@ -267,6 +267,7 @@ Customize this ReadMe and the code comments in this project to read less like a 
     [na] Create reducer component
     [x] Add to root reducer
     [x] reducer function- make sure call matches saga
+    [] single blog
     
   [] Saga
     [x] Create saga component
@@ -276,7 +277,7 @@ Customize this ReadMe and the code comments in this project to read less like a 
       [] /id
     [x] Read (POST)
     [] Update (PUT)
-    [] Delete (DELETE) 
+    [x] Delete (DELETE) 
     
   [] Create Server Routes (router)
     [x] Create (GET)

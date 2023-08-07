@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import axios from 'axios';
-import { useHistory, useParams  } from 'react-router-dom';
+import { useHistory, useParams, Link  } from 'react-router-dom';
 
 function UserBlog() {
   const blogPost = useSelector((store) => store.blog);
@@ -38,6 +38,7 @@ function UserBlog() {
           {blogPost.map(blog => {
             return (
               <>
+                <Link to="/blogform">Add Blog</Link>
                 <p>Title: {blog.date}</p>
                 <p>Author Name: {blog.author_first_name} {blog.author_last_name}</p>
                 <p>Date: {blog.date}</p>
