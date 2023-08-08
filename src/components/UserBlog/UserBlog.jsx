@@ -9,32 +9,31 @@ function UserBlog() {
   const history = useHistory();
   const dispatch = useDispatch();
   
-  const { blogId } = useParams();
+  // const { blogId } = useParams();
 
-  useEffect(() => {
-    dispatch({
-      type: 'FETCH_BLOG_DETAILS',
-      payload: blogId
-    });
-  }, [blogId]);
+  // useEffect(() => {
+  //   dispatch({
+  //     type: 'FETCH_BLOG_DETAILS',
+  //     payload: blogId
+  //   });
+  // }, [blogId]);
   
-  const deleteBlog = () => {
+  const deleteBlog = (blogId) => {
     confirm('Are you sure you want to delete this Blog? ');
     if (true){
       dispatch({ 
         type: 'DELETE_BLOG',
-        payload: blogId
+        payload: blogId 
       });
     }  
   }
   
-
-
   return (
     <div className="container">
         {/* <pre>{JSON.stringify(blogPost)}</pre> */}
 
-        <h1>Blogs</h1>
+        <h1>User Blogs</h1>
+        <>
           {blogPost.map(blog => {
             return (
               <>
@@ -43,10 +42,11 @@ function UserBlog() {
                 <p>Author Name: {blog.author_first_name} {blog.author_last_name}</p>
                 <p>Date: {blog.date}</p>
                 <p>Blog: {blog.post} </p>
-                <button onClick={deleteBlog}>Delete</button>
+                <button onClick={() => deleteBlog(blog.id)}>Delete</button>
               </>
             );
           })}
+          </>
     </div>
   );
 }

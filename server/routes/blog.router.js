@@ -2,7 +2,7 @@ const express = require('express');
 const pool = require('../modules/pool');
 const router = express.Router();
 
-// GET Blog
+// GET ALL Blogs
 router.get('/', (req, res) => {
  
       const queryText = `SELECT * FROM blog`;
@@ -15,6 +15,7 @@ router.get('/', (req, res) => {
 
 });
 
+// GET a Specific Blog
 router.get('/:id', (req, res) => {
 
       const queryText = `SELECT * FROM blog WHERE id=$1`;
@@ -52,8 +53,11 @@ router.post('/', (req, res) => {
 // DELETE Blog
 router.delete('/:id', (req, res) => {
   if (req.isAuthenticated()) {
-    const queryText = `DELETE FRMO "blog" WHERE "id" = $1 AND "user_id" = $2;`;
-    pool.query(queryText, [req.params.id, req.user.id]).then(() => {
+    const queryText = `DELETE FROM "blog" WHERE "id" = $1 AND "user_id" = $2;`;
+    pool.query(queryText, [
+      req.params.id, 
+      req.user.id
+    ]).then(() => {
       res.sendStatus(200);
     }).catch((error) => {
       console.log(error in router);
