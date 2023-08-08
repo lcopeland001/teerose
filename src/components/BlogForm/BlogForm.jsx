@@ -1,13 +1,18 @@
 import React from 'react';
 import { useSelector, useDispatch } from 'react-redux';
-import { useHistory, useParams  } from 'react-router-dom';
+import { useParams  } from 'react-router-dom';
 import { useEffect, useState } from 'react';
 import axios from 'axios';
+import { useNavigate } from 'react-router-dom-v5-compat';
 
 function BlogForm() {
-  const history = useHistory();
+  const navigate = useNavigate();
   const dispatch = useDispatch();
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> f3f9e8a2181f03e8634476eb48504f0b27930cfb
   const [author_first_name, setAuthorFirstName] = useState('');
   const [author_last_name, setAuthorLastName] = useState('');
   const [date, setDate] = useState('');
@@ -45,6 +50,7 @@ function BlogForm() {
     if(id) {
       dispatch({ 
         type: 'EDIT_BLOG', 
+<<<<<<< HEAD
         payload: { author_first_name, author_last_name, date, title, post, id, user_id } });
         history.push(`/user`);
     } else {
@@ -52,6 +58,13 @@ function BlogForm() {
         type: 'ADD_BLOG',
         payload: { author_first_name, author_last_name, date, title, post } });
         history.push(`/user`);
+=======
+        payload: { author_first_name, author_last_name, date, title, post, id, user_id }, navigate })
+    } else {
+      dispatch({ 
+        type: 'ADD_BLOG',
+        payload: { author_first_name, author_last_name, date, title, post }, navigate });
+>>>>>>> f3f9e8a2181f03e8634476eb48504f0b27930cfb
     }
   }
   return (

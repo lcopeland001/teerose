@@ -13,7 +13,15 @@ function* blogSaga() {
 function* addBlog(action) {
     try {
         yield axios.post(`/api/blog`, action.payload);
+<<<<<<< HEAD
         yield put({ type: 'FETCH_BLOG' });
+=======
+        yield put({ type: 'FETCH_BLOG'});
+        if (action.navigate) {
+            //redirect back to blog list page
+            action.navigate('/blog');
+        }
+>>>>>>> f3f9e8a2181f03e8634476eb48504f0b27930cfb
     }catch (e) {
         console.log('Error in Saga CREATE', e);
     }
@@ -34,6 +42,12 @@ function* fetchBlog() {
 function * editBlog(action) {
     try {
         yield axios.put(`/api/blog/${action.payload.id}`, action.payload);
+<<<<<<< HEAD
+=======
+        if (action.history) {
+            navigate('/blog');
+        }
+>>>>>>> f3f9e8a2181f03e8634476eb48504f0b27930cfb
     }catch (e) {
         console.log('Error in Blog Saga UPDATE', e);
     }

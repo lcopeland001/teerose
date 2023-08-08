@@ -1,5 +1,5 @@
 {
-  "name": "prime-solo-project",
+  "name": "tee-rose-app",
   "version": "0.1.0",
   "private": true,
   "proxy": "http://localhost:5008",
@@ -20,6 +20,7 @@
     "react-dom": "^18.2.0",
     "react-redux": "^7.2.6",
     "react-router-dom": "^5.3.4",
+    "react-router-dom-v5-compat": "^6.14.2",
     "react-scripts": "^5.0.1",
     "redux": "^4.1.2",
     "redux-logger": "^3.0.6",

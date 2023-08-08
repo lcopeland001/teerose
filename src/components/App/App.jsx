@@ -5,9 +5,11 @@ import {
   Route,
   Switch,
 } from 'react-router-dom';
-
+import { CompatRouter, 
+  BrowserRouter,
+  CompatRoute,
+} from 'react-router-dom-v5-compat';
 import { useDispatch, useSelector } from 'react-redux';
-
 import Nav from '../Nav/Nav';
 import Footer from '../Footer/Footer';
 
@@ -35,6 +37,7 @@ function App() {
   }, [dispatch]);
 
   return (
+<<<<<<< HEAD
     <Router>
       <div>
         <Nav />
@@ -85,6 +88,56 @@ function App() {
         <Footer />
       </div>
     </Router>
+=======
+    <BrowserRouter>
+      <CompatRouter>
+        <div>
+          <Nav />
+          <Switch>
+            <Redirect exact from="/" to="/home" />
+
+            <Route exact path="/home">
+                <HomePage />
+            </Route>
+
+            <Route exact path="/about">
+              <AboutPage />
+            </Route>
+
+            <CompatRoute exact path="/blog">
+              <BlogPage />
+            </CompatRoute>
+
+            <Route exact path="/social">
+              <SocialPage />
+            </Route>
+          
+            <ProtectedRoute exact path="/user">
+              <UserPage />
+            </ProtectedRoute>
+
+            <ProtectedRoute exact path="/blogform">
+              <BlogForm />
+            </ProtectedRoute>
+
+            <Route exact path="/login">
+              {user.id ? <Redirect to="/user" /> : <LoginPage />}
+            </Route>
+
+            <Route exact path="/registration">
+              {user.id ? <Redirect to="/user" /> : <RegisterPage />}
+            </Route>
+
+            <Route>
+              <h1>404</h1>
+            </Route>
+
+          </Switch>
+          <Footer />
+        </div>
+      </CompatRouter>
+    </BrowserRouter>
+>>>>>>> f3f9e8a2181f03e8634476eb48504f0b27930cfb
   );
 }
 
